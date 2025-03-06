@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{%block content%}
+<div class="text-center pt-3 pb-2">
+    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-todo-list/check1.webp"
+      alt="Check" width="60">
+    <h2 class="my-4">Task Add</h2>
+  </div>
+  <div>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Save</button>
+    </form>
+  </div>
+{%endblock%}
